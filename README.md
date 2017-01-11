@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README is made by Gabriella Gricius and it's going to be an e-commerce application for an online store. 
 
 Things you may want to cover:
 
