@@ -17,11 +17,15 @@ body {
   background-color: #2c2c2c;
   padding-top: 51px;
 }
-form {
+table {
+  text-align: center;
+  border: 1px solid black;
+}
+form th, td {
   text-align: center;
   background-color: #2c2c2c;
 }
-#form1 {
+li {
   text-decoration: none;
   text-align: center;
 }
