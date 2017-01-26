@@ -3,15 +3,14 @@
   <head>
     <title>Sonntag Nacht</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <!-- Latest Boostrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width", "initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Oxygen and Poiret One Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <!-- Sticky Footer Nonsense -->
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -38,9 +37,7 @@
 
 <%= yield %>
   <footer>
-    <div class="container">
-        <p class="text-muted">&copy; 2017 Sonntag Nacht.</p>
-      </div>
+      2017 Sonntag Nacht
   </footer>
-</body>
+  </body>
 </html>

@@ -13,4 +13,26 @@
  *= require_tree .
  *= require_self
  */
-<link href="sticky-footer.css" rel="stylesheet">
+ /* latin-ext */
+ html {
+   height: 100%;
+ }
+ body {
+   color: #f8f8ff;
+   font-family: 'Poiret One', cursive;
+   text-align: center;
+   background-color: #2c2c2c;
+   padding-top: 51px;
+ }
+ footer {
+   color: black;
+   font-weight: bolder;
+   position: fixed;
+   bottom: 0;
+   text-align: center;
+   width: 100%;
+   opacity: 0.3;
+   margin-left: -5%;
+   height: 30px;
+   background-color: #f5f5f5;
+ }
