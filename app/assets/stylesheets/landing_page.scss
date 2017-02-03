@@ -1,0 +1,25 @@
+//.carousel-inner {
+//  background-color: pink;
+  //max-height: 80%;
+  //background-image: cover;
+  //max-width: 100%;
+//}
+
+.carousel-caption {
+  font-size: 3em;
+  padding-bottom: 10%;
+  font-variant: small-caps;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    height: 80vh;
+}
+
+.carousel-control {
+  opacity: 0.4;
+}
+
+.carousel-control:hover {
+  opacity: 0.4;
+}
