@@ -32,13 +32,16 @@
                    <li><%= link_to "Products", products_path %></li>
                    <li><%= link_to "Contact", static_pages_contact_path %></li>
                  </ul>
+                 <%= form_tag("/products", method: "get") do %>
+                 <%= label_tag(:q, "Search for:") %>
+                 <%= text_field_tag(:q) %>
+                 <%= submit_tag("Search") %>
+                 <% end %>
               </div> <!-- nav -->
            </div> <!-- end nav container-->
      </nav>  <!-- end navbar-->
 
 <%= yield %>
-  <footer>
-      2017 Sonntag Nacht
-  </footer>
+<%= render "shared/footer" %>
   </body>
 </html>
