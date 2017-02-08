@@ -1,10 +1,14 @@
+
 .searchform {
   float: right;
 }
-.form {
-  color: grey;
+input[type="text"] {
+  color: black;
+  text-align: left;
 }
-
-.actions {
-  color: grey;
+.form {
+  color: black;
+}
+button {
+  color: black;
 }
