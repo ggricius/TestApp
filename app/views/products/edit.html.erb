@@ -2,8 +2,8 @@
 
 <%= render 'form', product: @product %>
 <div class="products-form">
-	<div class="col-sm-offset-2 col-sm-10">
-		<%= link_to 'Show', @product %> |
-		<%= link_to 'Back', products_path %>
+	<div class="col-sm-12">
+		<button class="btn btn-primary btn-colour-change"><%= link_to 'Show', @product %></button> |
+		<button class="btn btn-primary btn-colour-change"><%= link_to 'Back', products_path %></button>
 	</div>
 </div>

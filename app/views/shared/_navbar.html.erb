@@ -17,11 +17,9 @@
               <li><%= link_to "Contact", static_pages_contact_path %></li>
             </ul>
         <div class="searchform">
-            <%= form_tag("/products", method: "get") do %>
-            <%= label_tag(:q, "Search for:") %>
+            <%= form_tag("/products", method: "get") do %> <br>
             <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <button class="btn btn-primary btn-colour-change"><%= submit_tag("Search") %></button>
             <% end %>
         </div>
          </div> <!-- nav -->
