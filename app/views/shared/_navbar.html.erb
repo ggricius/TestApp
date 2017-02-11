@@ -15,11 +15,18 @@
                <li><%= link_to "About", static_pages_about_path %></li>
               <li><%= link_to "Products", products_path %></li>
               <li><%= link_to "Contact", static_pages_contact_path %></li>
+              <li class="login">
+                <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+            </li>
             </ul>
         <div class="searchform">
             <%= form_tag("/products", method: "get") do %> <br>
             <%= text_field_tag(:q) %>
-            <button class="btn btn-primary btn-colour-change"><%= submit_tag("Search") %></button>
+            <%= submit_tag("Search") %>
             <% end %>
         </div>
          </div> <!-- nav -->

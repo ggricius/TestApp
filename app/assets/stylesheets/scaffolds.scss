@@ -2,15 +2,15 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 18px;
   margin: 33px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 18px;
   margin: 33px;
 }
 
@@ -26,8 +26,9 @@ a {
   &:visited {
     color: #666;
   }
+
   &:hover {
-    text-decoration: none;
+    color: #fff;
   }
 }
 
