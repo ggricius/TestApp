@@ -13,22 +13,19 @@
     text-decoration: none;
     border: none;
 }
-
 .btn-colour-change:hover {
-    color: white;
     background-color: red;
     text-decoration: none;
     border: none;
 }
-
+input[type=text]:hover {
+  text-decoration: none;
+  color: blue;
+}
 .product_image {
   display: block;
   position: relative;
   margin: auto;
   overflow: hidden;
   max-width: 100%;
-}
-
-button {
-  text-align: center;
 }

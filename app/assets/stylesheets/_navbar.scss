@@ -6,9 +6,9 @@ input[type="text"] {
   color: black;
   text-align: left;
 }
-.form {
+input[type="submit"] {
   color: black;
-}
-button {
-  color: black;
+  border: none;
+  text-decoration: none;
+  background-color: inherit;
 }
