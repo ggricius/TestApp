@@ -24,7 +24,8 @@
             </li>
             </ul>
         <div class="searchform">
-            <%= form_tag("/products", method: "get") do %> <br>
+            <%= form_tag("/products", method: "get", class: "form") do %> <br>
+            <%= label_tag(:q, " ") %>
             <%= text_field_tag(:q) %>
             <%= submit_tag("Search") %>
             <% end %>
