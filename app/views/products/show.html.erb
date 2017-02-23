@@ -26,14 +26,9 @@
     <strong>Price:</strong>
     €<%= @product.price %>
   </p>
-
-  <p>
-    <strong>Comments</strong>
-    <%= @product.highest_rating_comment %>
-  </p>
   </div>
 </div>
 
-<div class-"col-md-8">
+<div class-"col-md-6">
     <%= image_tag(@product.image_url, class: "img-responsive") %>
 </div>
