@@ -32,3 +32,12 @@
 <div class="col-md-8">
     <%= image_tag(@product.image_url, class: "img-responsive") %>
 </div>
+<br>
+<div class="row">
+    	<div class="col-md-12 ">
+       		<h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> User Ratings</h4>
+        <p>  <%= render 'comments/comments' %></p>
+			<p><%= @product.highest_rating_comment %></p><br>
+			<p><%= @product.lowest_rating_comment %></p>
+		</div>
+	</div>
