@@ -22,6 +22,13 @@
                 <%= link_to('Login', new_user_session_path) %>
                 <% end %>
             </li>
+            <li class ="edituser">
+              <% if user_signed_in? %>
+              <%= link_to('Edit User',  edit_user_registration_path) %>
+              <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+            </li>
             </ul>
         <div class="searchform">
             <%= form_tag("/products", method: "get", class: "navbar-form collapsed navbar-left") do %>
