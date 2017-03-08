@@ -16,14 +16,13 @@
               <li><%= link_to "Products", products_path %></li>
               <li><%= link_to "Contact", static_pages_contact_path %></li>
               <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-            <% if user_signed_in? %>
-              <%= current_user.first_name %>
-            <% else %>
-              <%= link_to 'Login', new_user_session_path %>
-            <% end %>
-             <span class="caret"></span>
-          </a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><span class="caret"></span>
+                  <% if user_signed_in? %>
+                    <%= current_user.first_name %>
+                  <% else %>
+                    <%= link_to 'Login', new_user_session_path %>
+                  <% end %>
+              </a>
           <ul class="dropdown-menu">
             <li>
               <% if user_signed_in? %>
@@ -39,8 +38,7 @@
             </li>
           </ul>
         </li>
-        <li>
-            </ul>
+      </ul>
         <div class="searchform">
             <%= form_tag("/products", method: "get", class: "navbar-form collapsed navbar-left") do %>
             <%= label_tag(:q, " ") %>
