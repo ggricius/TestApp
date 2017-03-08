@@ -3,10 +3,13 @@
 }
 
 p {
-  text-align: center;
+  text-align: left;
   font-size: 0.9em;
   line-height: 1.3em;
   font-family: 'Poiret One', cursive;
+}
+h1 {
+  color: white;
 }
 hr {
        display: block;
@@ -23,3 +26,6 @@ hr {
        border-top: 1px solid #aaaaaa;
        border-bottom: 1px solid #ffffff;
     }
+.row, .rated {
+  text-align: left;
+}
