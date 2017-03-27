@@ -20,6 +20,9 @@
           <h3 class="product-page"><%= @product.colour %></h3>
           <p class="product-page"><%= @product.description %></p>
           <h1><%= @product.price %> euros</h1>
+          <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
       </div>
       <!--   <hr>
       <% if !@product.comments.empty? %>
