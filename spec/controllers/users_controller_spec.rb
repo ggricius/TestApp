@@ -3,8 +3,8 @@ describe UsersController, :type => :controller do
 
   before do
     #@user = User.create!(email: "example@example.com", password: "testpassed123")
-    @user = FactoryGirl.create(:user)
-    @user2 = FactoryGirl.create(:user, password: "1234567")
+    @user = FactoryGirl.create!(:user)
+    @user2 = FactoryGirl.create!(:user, password: "1234567")
   #  @user2 = User.create!(email: "example1@example.com", password: "testpasseddfdf123")
   end
   describe 'GET #show' do
