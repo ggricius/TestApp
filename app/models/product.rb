@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
 
   validates :name, presence: true
+  validates :image_url, format: {with: /\.(png|jpg)\Z/i}
+  validates :price, presence: true, format: {with: /\A\d+(?:\.\d{0,2})?\z/ }, numericality: {greater_than: 0, less_than: 1000000 }
   has_many :orders
   has_many :comments
 
