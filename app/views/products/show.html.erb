@@ -21,7 +21,7 @@
           <p class="product-page"><%= @product.description %></p>
           <h1><%= @product.price %> euros</h1>
           <%= form_tag "/payments/create" do %>
-              <%= render partial: "shared/stripe_checkout_button" %>
+              <%= render "shared/stripe_checkout_button" %>
           <% end %>
       </div>
       <!--   <hr>
@@ -48,7 +48,8 @@
       <div class="col-md-6 col-xs-12 text-center">
         <%= render "comments" %>
       </div>
-  </div>
+    </div>
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
+</div>
 </div>
