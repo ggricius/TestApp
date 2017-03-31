@@ -3,9 +3,10 @@ class PaymentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
+    token = params[:stripeToken]
     @product = Product.friendly.find(params[:product_id])
     @user = current_user
-    token = params[:stripeToken]
+
     begin
       charge = Stripe::Charge.create(
         :amount =>  @product.price, # amount in cents, again
@@ -29,7 +30,5 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
     redirect_to product_path(product)
-    end
-
   end
 end

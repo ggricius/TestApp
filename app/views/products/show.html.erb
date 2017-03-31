@@ -1,5 +1,4 @@
 <div class="container-fluid">
-  byebug
   <p id="notice"><%= notice %></p>
   <div class="col-md-12">
     <div class="commands">
@@ -22,7 +21,7 @@
           <p class="product-page"><%= @product.description %></p>
           <h1><%= @product.price %> euros</h1>
           <%= form_tag "/payments/create" do %>
-              <%= render "shared/stripe_checkout_button" %>
+              <%= render partial: "shared/stripe_checkout_button" %>
           <% end %>
       </div>
       <!--   <hr>
