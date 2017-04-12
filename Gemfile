@@ -69,3 +69,5 @@ gem 'cancancan', '~> 1.10'
 gem 'rails-controller-testing'
 
 gem 'stripe'
+
+gem 'dalli'

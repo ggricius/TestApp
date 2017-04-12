@@ -1,3 +1,4 @@
+<% cache product do %>
 <div class="col-sm-6 col-md-4">
 	<div class="thumbnail">
     <div class="product_image">
@@ -6,8 +7,8 @@
      	<div class="caption">
      		<h4><%= product.name %></h4>
     		<h5><%= product.colour %></h5>
-        <h6><%= product.description %></h6>
-    		<h6><%= product.price %></h6>
+      	<h6><%= product.description %></h6>
+  			<h6><%= product.price %></h6>
         <button class="btn btn-primary btn-colour-change"><%= link_to 'Show', product %></button>
 				<% if signed_in? && current_user.admin? %>
     			<button class="btn btn-primary btn-colour-change"><%= link_to 'Edit', edit_product_path(product) %></button>
@@ -16,3 +17,4 @@
 				</div>
     </div>
 </div>
+<% end %>

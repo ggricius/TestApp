@@ -13,6 +13,7 @@
         <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: "@product.image_url") %>
       </div>
       <div class="col-md-6 col-xs-12">
+        <% cache @product do %>
           <h2><%= @product.name %></h2>
             <% if !@product.comments.empty? %>
               <p class="product-page">Average Rating: <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span> </p>
@@ -24,6 +25,7 @@
               <%= render partial: "shared/stripe_checkout_button" %>
           <% end %>
       </div>
+      <% end %>
       <!--   <hr>
       <% if !@product.comments.empty? %>
         <div class="comments_bestworst">
