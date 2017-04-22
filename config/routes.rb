@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
   resources :users
 
+  mount ActionCable.server => '/cable'
+
   get 'static_pages/about'
   get 'static_pages/contact'
   post 'static_pages/thank_you'
