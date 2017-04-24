@@ -12,8 +12,9 @@ var refreshRating = function() {
 $(document).on('turbolinks:load ajaxSuccess',function(){
     refreshRating();
 
-    $(".img_zoom").elevateZoom();
+    $(".img_zoom").elevateZoom(
 	    zoomType: "lens",
 	    lensShape: "round",
 	    lensSize: 150
+    );
 });
