@@ -13,7 +13,7 @@ $(document).on('turbolinks:load ajaxSuccess',function(){
     refreshRating();
 
     $(".img_zoom").elevateZoom();
-	  //  zoomType: "lens",
-	    //lensShape: "round",
-	    //lensSize: 150
+	    zoomType: "lens",
+	    lensShape: "round",
+	    lensSize: 150
 });

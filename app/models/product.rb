@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
 
   validates :name, presence: true
-  validates :image_url, format: { with: %r{\A.(gif|jpg|png)\Z}i, message: 'must be a URL for GIF, JPG or PNG image.' }
-  validates :price, presence: true, format: {with: /\A\d+(?:\.\d{0,2})?\z/ }, numericality: {greater_than: 0, less_than: 1000000 }
+  validates :image_url, format: {with: /\.(png|jpg)\Z/i, message: 'must be a URL for GIF, JPG or PNG image.' }
+  validates :price, presence: true
   has_many :orders
   has_many :comments
 

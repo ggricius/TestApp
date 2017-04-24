@@ -1,52 +1,65 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid" id="header2">
+      <div class="container-fluid">
          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
                <span class="sr-only">Toggle navigation</span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
             </button>
          </div> <!--end navbar-header -->
-         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
+         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left" role="navigation">
                <li><%= link_to "Home", static_pages_index_path %></li>
                <li><%= link_to "Landing Page", static_pages_landing_page_path %></li>
                <li><%= link_to "About", static_pages_about_path %></li>
-              <li><%= link_to "Products", products_path %></li>
-              <li><%= link_to "Contact", static_pages_contact_path %></li>
+               <li><%= link_to "Products", products_path %></li>
+               <li><%= link_to "Contact", static_pages_contact_path %></li>
+               <li>
+                <% if signed_in? && current_user.admin? %>
+                <%= link_to 'New Product', new_product_path, :class => "new_product" %>
+                <% end %>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" role="navigation">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
                   <% if user_signed_in? %>
                     <%= current_user.first_name %>
                   <% else %>
                     <%= link_to 'Login', new_user_session_path %>
+                    <%= link_to 'Sign up', new_user_registration_path %>
                   <% end %>
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <% if user_signed_in? %>
-                      <%= link_to 'Edit password', edit_user_registration_path %>
-                    <% end %>
-                  </li>
-                  <li>
-                    <% if user_signed_in? %>
-                      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                    <% else %>
-                      <%= link_to('Login', new_user_session_path) %>
-                    <% end %>
-                </li>
-              </ul>
-            </li>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <%  if signed_in? && current_user.admin?  %>
+                    <%= link_to 'Edit user', "/users" %>
+                  <% end %>
+               </li>
+               <li>
+                 <% if user_signed_in? %>
+                  <%= link_to 'Edit password', edit_user_registration_path %>
+                 <% end %>
+              </li>
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li>
           </ul>
-        <div class="searchform">
-            <%= form_tag("/products", method: "get", class: "navbar-form collapsed navbar-left") do %>
-            <%= label_tag(:q, " ") %>
-            <%= text_field_tag(:q, nil, :placeholder => "Search", class: "form-control navbar-left search-from-size") %>
-            <%= submit_tag("Search", class: "btn btn-default", type: "submit") %>
-            <% end %>
-        </div>
-         </div> <!-- nav -->
-      </div> <!-- end nav container-->
+        </li>
+      </ul>
+      <div class="searchform">
+          <%= form_tag("/products", method: "get", class: "navbar-form collapsed navbar-left") do %>
+          <%= label_tag(:q, " ") %>
+          <%= text_field_tag(:q, nil, :placeholder => "Search", class: "form-control navbar-left search-from-size") %>
+          <%= submit_tag("Search", class: "btn btn-default", type: "submit") %>
+          <% end %>
+      </div>
+    </div> <!-- nav -->
+  </div> <!-- end nav container-->
 </nav>  <!-- end navbar-->
